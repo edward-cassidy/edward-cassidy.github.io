@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 2: Enigma Recap: Operation: Input and Scrambler Rotatiom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1 class = "mainhead">Operation: Input and Scrambler Rotation</h1>
+    <p class = "paragraph">
+
+        Now that the plugboard and scramblers are set up to their desired positions, the Enigma operator can encode a message.
+        (although actual protocol for sending a message was more complicated than this).
+
+        <br><br>
+
+        When a key is pressed on the Enigma machine, say the <span class="code">a</span> key, the first thing that happens is <b>the scrambler
+        on the far-right rotates by one step</b> (so if it was previously in position <span class="code">A</span>, it is now in position <span class="code">B</span>).
+
+        <br><br>
+
+        For every <b>full rotation</b> the far-right scrambler makes, the middle scrambler will rotate by one, and similarly for
+        the far-left scrambler (although not exactly, as the true mechanism for the far-left scrambler's rotation
+        is slightly more complicated and unintuitive). Due to how often each scrambler rotates, the far-right scrambler is often called the
+        <b>fast rotor</b>, and the far-left the <b>slow rotor</b>.
+
+        <br><br>
+
+        It should be noted that the next scrambler doesn't necessarily rotate when the previous scrambler rotates from <span class="code">Z</span> back to <span class="code">A</span>.
+        In fact, the timing of these turnovers is what the <b>ring settings</b> define (which, again, are out of the scope of this recap).
+
+    </p>
+
+
+</body>
+</html>

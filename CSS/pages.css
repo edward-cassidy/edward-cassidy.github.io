@@ -1,0 +1,42 @@
+.mainhead{
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 200%;
+}
+
+.paragraph{
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size:120%;
+}
+
+body, html
+{
+    height:100%;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.titlehead{
+    position: relative;
+    margin-top:15rem;
+    font-size: 400%;
+}
+
+.code
+{
+    font-family: "Courier New";
+    font-weight: bold;
+    font-size: 115%;
+}
+
+.figure
+{
+    position: relative;
+    margin-top: 3rem;
+    height: calc(100% - 36rem);
+    min-height: 30rem;
+}

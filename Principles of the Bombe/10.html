@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 5: Principles of the Bombe: The Expanded Menu Diagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+
+</head>
+<body>
+
+    <h1 class = "mainhead">The Expanded Menu Diagram</h1>
+    <p class = "paragraph">
+
+        The process just described is captured by the expanded menu diagram.
+
+        <br><br>
+
+        The <b>double, parallel lines represent plugboard transformations</b>.
+
+        <br><br>
+
+        The <b>single wavy lines represent the scrambler transformations</b>, still labelled with their relative scrambler position.
+
+        <br><br>
+
+        The Greek stecker variables are also written in red, to emphasise that they are indeed variables, so they all must take on some (as of yet unknown) letter value.
+
+    </p>
+
+    <figure class="figure">
+        <svg id="menuSVG" style = "position: relative; height: 80%"></svg>
+        <figcaption>
+            <em><b>Figure 5.2</b></em>: The expanded menu diagram is shown again for reference.
+        </figcaption>
+    </figure>
+
+    <script>
+
+        /* The menu example */
+        let menuExample;
+
+        /* Create the menu diagram */
+        document.addEventListener ( "DOMContentLoaded", () =>
+        {
+            /* Create the menu example */
+            menuExample = new MenuExample ( d3.select ( "#menuSVG" ), true );
+        } );
+
+    </script>
+
+
+</body>
+</html>

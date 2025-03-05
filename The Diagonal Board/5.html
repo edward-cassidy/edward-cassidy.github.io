@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 8: The Diagonal Board: Adding The Diagonal Board</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="../CSS/pages.css" rel="stylesheet" />
+	<link href="../CSS/BombeUI.css" rel="stylesheet" />
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="../javascript/bombe.min.js"></script>
+
+</head>
+<body style="scroll-behavior: smooth">
+
+	<h1 class = "mainhead">Adding The Diagonal Board</h1>
+	<p class = "paragraph">
+
+		We have just added quite a few extra wires, so let's look more carefully at what's going on.
+
+		<br><br>
+
+		The diagram below lets you power on a wire of your choice, in a cable of your choice. As you experiment, make sure
+		you try powering on a wire such as the <span class="code">a</span> wire in the <span class="code">&#945</span> cable,
+		or the <span class="code">b</span> wire in the <span class="code">&#946</span> cable, etc...
+
+	</p>
+
+
+
+	<figure id="bombe-wrapper" style="position: relative; height: 100vh; width: 100%; top: 4rem;">
+
+		<svg id="bombe-svg" style="width: 100%; height: calc(100% - 10rem); "></svg>
+
+		<div class="bombeui-controls-container" >
+
+			<span class="bombeui-controls-separator"></span>
+
+			<p id="cable-text" class="bombeui-controls-text">Cable to Power On</p>
+			<div id="cable-wrapper" class="bombeui-controls-vertical-selector-wrapper">
+				<button id="cable-up" class="bombeui-controls-vertical-selector-button">&#9650;</button>
+				<span id="cable-output" class="bombeui-controls-vertical-selector-output">&#945</span>
+				<button id="cable-down" class="bombeui-controls-vertical-selector-button">&#9660;</button>
+			</div>
+
+			<span class="bombeui-controls-separator"></span>
+
+			<p id="wire-text" class="bombeui-controls-text">Wire to Power On</p>
+			<div id="wire-wrapper" class="bombeui-controls-vertical-selector-wrapper">
+				<button id="wire-up" class="bombeui-controls-vertical-selector-button">&#9650;</button>
+				<span id="wire-output" class="bombeui-controls-vertical-selector-output">b</span>
+				<button id="wire-down" class="bombeui-controls-vertical-selector-button">&#9660;</button>
+			</div>
+
+			<span class="bombeui-controls-separator"></span>
+
+			<p class="bombeui-controls-text">Animation Speed</p>
+			<span id="animation-speed-output" class="bombeui-controls-vertical-slider-output">100</span>
+			<div class="bombeui-controls-vertical-slider-wrapper">
+				<input type="range" id="animation-speed-slider" class="bombeui-controls-vertical-slider" min="0" max="500" step="1" value="400" orientation="vertical" />
+			</div>
+
+			<span class="bombeui-controls-separator"></span>
+
+			<button id="power-button" class="bombeui-controls-button">Power On</button>
+
+			<span class="bombeui-controls-separator"></span>
+
+		</div>
+
+		<figcaption><em><b>Figure 8.2</b></em>: Use the controls to play around with sending current through wires of the diagonal board.</figcaption>
+
+	</figure>
+
+
+
+	<script>
+
+		/* The duration of the transformation */
+		const DURATION = 4000;
+
+		/* Create the bombe */
+		const bombe = new FullBombeExample ( null, d3.select ( "#bombe-svg" ), "empty" );
+		bombe.movementDuration = 0;
+		bombe.dboard = true;
+
+		/* Create variables for each of the settings */
+		let cable = 0;
+		let wire = 1;
+
+
+
+		/* Hide the test register */
+		bombe._plugColumns [ 0 ]._svgTestRegister.style ( "visibility", "hidden" );
+		for ( let i = 0; i < 8; ++i )
+			bombe._plugColumns [ 0 ]._wireLabels [ cable ] [ i ].attr ( "x", bombe._plugColumns [ 0 ]._wireLabels [ ( cable + 1 ) % 8 ] [ i ].attr ( "x" ) );
+
+		/* Set click handler to scroll the screen */
+		const bombeWrapper = d3.select ( "#bombe-wrapper" ).on ( "click", () => document.body.scrollTo ( 0, bombeWrapper.node ().offsetTop ) );
+
+
+		/* Set the cable change callbacks */
+		d3.selectAll ( "#cable-up,#cable-down" ).data ( [ 1, -1 ] ).on ( "click", ( e, i ) =>
+		{
+			/* Change the cable */
+			cable = ( cable + i + 8 ) % 8;
+
+			/* Set the output */
+			d3.select ( "#cable-output" ).text ( bombe.steckerAlphabet.charAt ( cable ) );
+
+			/* Set the test register */
+			bombe.testRegisterIndex = cable;
+
+			/* Fix the cable positions */
+			for ( let i = 0; i < 8; ++i )
+				bombe._plugColumns [ 0 ]._wireLabels [ cable ] [ i ].attr ( "x", bombe._plugColumns [ 0 ]._wireLabels [ ( cable + 1 ) % 8 ] [ i ].attr ( "x" ) );
+		} );
+
+		/* Set the wire change callbacks */
+		d3.selectAll ( "#wire-up,#wire-down" ).data ( [ 1, -1 ] ).on ( "click", ( e, i ) =>
+		{
+			/* Change the cable */
+			wire = ( wire + i + 8 ) % 8;
+
+			/* Set the output */
+			d3.select ( "#wire-output" ).text ( bombe.alphabet.charAt ( wire ) );
+		} );
+
+
+
+		/* Set the animation speed input and change callbacks */
+		const slider = d3.select ( "#animation-speed-slider" ).on ( "input", () =>
+		{
+			/* Change the output */
+			d3.select ( "#animation-speed-output" ).text ( 500 - parseFloat ( slider.property ( "value" ) ) );
+		} ).on ( "change", () =>
+		{
+			/* Set the bombe's animation speed */
+			bombe.animationSpeed = 500 - parseFloat ( slider.property ( "value" ) );
+		} );
+
+
+
+		/* Set up the power button */
+		const powerButton = d3.select ( "#power-button" ).on ( "click", () =>
+		{
+			/* Switch depending on whether the bombe is powered */
+			if ( bombe.activeAnimation )
+			{
+				/* Disable the power button */
+				powerButton.style ( "pointer-events", "none" ).style ( "opacity", 0.5 );
+
+				/* Power off */
+				bombe.powerOff ().finally ( () =>
+				{
+					/* Enable the cable and wire buttons */
+					d3.selectAll ( "[id^=cable],[id^=wire]" )
+						.style ( "pointer-events", "" )
+						.style ( "opacity", "" );
+
+					/* Change the text of the power button and enable it */
+					powerButton.style ( "pointer-events", "" ).style ( "opacity", "" )
+						.text ( "Power On" );
+				} );
+			} else
+			{
+				/* Disable the cable and wire buttons */
+				d3.selectAll ( "[id^=cable],[id^=wire]" )
+					.style ( "pointer-events", "none" )
+					.style ( "opacity", 0.5 );
+
+				/* Change the text on the power button */
+				powerButton.text ( "Power Off" );
+
+				/* Power on */
+				bombe.powerOn ( wire );
+			}
+		} );
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Chapter 3: Fundamentals: Making Effective Crib Predictions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+
+    <style>
+        .slidecontainer{
+            position: relative;
+            width: 400px;
+            top: 10em;
+            margin: auto;
+        }
+
+
+        .slider {
+            -webkit-appearance: none;  /* Override default CSS styles */
+            appearance: none;
+            width: 100%; /* Full-width */
+            height: 15px; /* Specified height */
+            background: #d3d3d3; /* Grey background */
+            outline: none; /* Remove outline */
+            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+            border-radius: 1rem;
+        }
+
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        /* The slider handle use webkit for Chrome, Opera, Safari, Edge and moz for Firefox*/
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 1rem;
+            height: 1rem;
+            appearance: none;
+            background: #333;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        .slider::-moz-range-thumb {
+            background: #333;
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        .grid
+        {
+            position: relative;
+            justify-content: center;
+            width: 100%;
+            display: grid;
+            column-gap: 30px;
+            row-gap: 0px;
+            font-family: "Courier New";
+            font-weight: bold;
+            font-size: 200%;
+            grid-template-columns: repeat(17, 20px);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div class="text-center">
+    <h1 class="mainhead">Making Effective Crib Predictions</h1>
+    <p class="paragraph">
+        We can effectively imagine sliding our guess (the crib) under the ciphertext. Since we know two letters cannot match up, we must find
+        a part of the ciphertext where no letter matches the crib.
+
+        <br><br>
+
+        As explained in the introduction, we are using a reduced bombe, so our example can only use the first 8 letters of the
+        alphabet.
+
+        <br><br>
+
+        Try for yourself. Slide the bar to find a correct matching:
+    </p>
+</div>
+
+<figure style = "position: relative; margin-top: 3rem;">
+    <div class="text-center grid">
+            <p id = "cy_0">E</p>
+            <p id = "cy_1">A</p>
+            <p id = "cy_2">C</p>
+            <p id = "cy_3">B</p>
+            <p id = "cy_4">B</p>
+            <p id = "cy_5">E</p>
+            <p id = "cy_6">G</p>
+            <p id = "cy_7">F</p>
+            <p id = "cy_8">F</p>
+            <p id = "cy_9">B</p>
+            <p id = "cy_10">H</p>
+            <p id = "cy_11">G</p>
+            <p id = "cy_12">A</p>
+            <p id = "cy_13">E</p>
+            <p id = "cy_14">G</p>
+            <p id = "cy_15">G</p>
+            <p id = "cy_16">C</p>
+            <p id="pl_0">B</p>
+            <p id="pl_1">A</p>
+            <p id="pl_2">B</p>
+            <p id="pl_3">B</p>
+            <p id="pl_4">A</p>
+            <p id="pl_5">G</p>
+            <p id="pl_6">E</p>
+    </div>
+
+    <div class="slidecontainer" style="margin: auto">
+        <input type="range" min="0" max="10" value="0" class="slider" id="slider">
+    </div>
+    <p id="value" style="font-size: 24px; top: 8em; position:relative; width: 100%;"></p>
+    <figcaption>
+        <em><b>Figure 3.1</b></em>: A flow chart relating ciphertext to plaintext.
+    </figcaption>
+</figure>
+
+<script>
+    var slider = document.getElementById("slider");
+    var arr_cipher = ["E","A","C", "B", "B", "E", "G", "F", "F", "B", "H", "G", "A", "E", "G", "G", "C"];
+    var arr_plaintext = ["B", "A", "B", "B", "A", "G", "E"];
+
+    slider.oninput = slider.onmousedown = function() {
+        var correct = true;
+        var value = parseInt ( this.value );
+
+        for (let i = 0; i < 17; i++) {
+            document.getElementById("cy_"+i).style.color = "black";
+        }
+
+        document.getElementById ( "pl_0" ).style.gridColumn = value + 1;
+
+        for (let i = 0; i < 7; i++) {
+            if(arr_cipher[i+value]===arr_plaintext[i]){
+                document.getElementById("cy_"+(i+value)).style.color = "red";
+                document.getElementById("pl_"+i).style.color = "red";
+                document.getElementById("value").innerText = value;
+                correct = false;
+            }else{
+                document.getElementById("cy_"+(i+value)).style.color = "green";
+                document.getElementById("pl_"+i).style.color = "green";
+            }
+        }
+        if(correct){
+            document.getElementById("value").style.color = "green";
+            document.getElementById("value").innerText = "Correct";
+        }else{
+            document.getElementById("value").style.color = "red";
+            document.getElementById("value").innerText = "Incorrect";
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

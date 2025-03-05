@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 5: Principles of the Bombe: Contradictions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1 class = "mainhead">Contradictions</h1>
+    <p class = "paragraph">
+
+        Well... yes and no.
+
+        <br><br>
+
+        The process we used to derive conclusions about stecker variables is, in fact, perfectly sound. So we did nothing wrong there.
+
+        <br><br>
+
+        So there is actually only one place left that the problem could originate from: <b>one or both of our assumptions were incorrect</b>.
+        We can't say which assumption was incorrect from this contradiction alone, but what we can say is:
+
+        <br><br>
+
+        <b>"For the assumed initial scrambler positions, <span class="code">a</span> cannot be steckered to <span class="code">b</span></b>."
+
+        <br><br>
+
+        So finally, we have the conditions for an <b>invalid steckering</b> based on the menu, for a given initial scrambler position.
+
+        <br><br>
+
+        Specifically, we assumed the initial scrambler positions and steckering we wanted to rule out
+        (in this case assuming that <span class="code">&#945</span> = <span class="code">b</span>), and then <b>used a <u>cycle</u> in the menu</b>
+        in order to re-derive the value of <span class="code">&#945</span>. We then observed that the new value we found is not the same as
+        the one we originally assumed (which we call a contradiction).
+
+    </p>
+
+
+</body>
+</html>

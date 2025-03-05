@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6: Single Line Hypothesis: Completing the Single Line Hypothesis</title>
+
+
+    <style>
+    .slidecontainer{
+    width: 400px;
+    }
+
+
+    .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 100%; /* Full-width */
+        height: 15px; /* Specified height */
+        background: #d3d3d3; /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+        border-radius: 1rem;
+    }
+
+
+    .slider:hover {
+    opacity: 1;
+    }
+
+    /* The slider handle use webkit for Chrome, Opera, Safari, Edge and moz for Firefox*/
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 1rem;
+        height: 1rem;
+        appearance: none;
+        background: #333;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    .slider::-moz-range-thumb {
+        background: #333;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    </style>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+<body>
+
+
+    <h1 class="mainhead">Completing the Single Line Hypothesis</h1>
+
+    <figure>
+        <svg id="bombe" style="position: relative; height: 30em; aspect-ratio: 0.8; margin:auto; transform: translate(-10%,0)"></svg>
+        <svg id="menu" style="position: relative; margin:auto; height: 30em; aspect-ratio: 1;  transform: translate(30%,0)"></svg>
+        <div class="slidecontainer" style="margin: auto; position:relative; margin-top: 3em; margin-bottom: 3em;">
+            <input type="range" min="0" max="4" value="0" class="slider" id="slider">
+        </div>
+        <figcaption><em><b>Figure 6.8</b></em>: Use the slider to add the scramblers to the circuit diagram.</figcaption>
+    </figure>
+
+
+
+
+<script>
+
+
+
+    let slider = document.getElementById("slider");
+    let menusvg = d3.select("#menu");
+    let menu = new MenuExample(menusvg,true);
+    let bombesvg = d3.select("#bombe");
+    let bombe = new SLHBombeExample(null,bombesvg,0,400);
+
+    menu.hideAllLinks();
+    menu.hideNode("h");
+    menu.hideNode("f");
+
+    bombe._plugColumns [ 0 ]._svgTestRegister.remove ();
+
+    slider.oninput = function() {
+        bombe.drumCount = parseInt(this.value);
+        if(parseInt(this.value)==0){
+            menu.hideAllLinks();
+
+        }else if(parseInt(this.value)==1){
+            menu.hideAllLinks();
+            menu.showLink("a","b");
+        }else if(parseInt(this.value)==2){
+            menu.hideAllLinks();
+            menu.showLink("a","b");
+            menu.showLink("b","e");
+        }else if(parseInt(this.value)==3){
+            menu.hideAllLinks();
+            menu.showLink("a","b");
+            menu.showLink("b","e");
+            menu.showLink("e","g");
+        }else if(parseInt(this.value)==4){
+            menu.showLink("a","b");
+            menu.showLink("b","e");
+            menu.showLink("e","g");
+            menu.showLink("g","a");
+        }
+    }
+
+
+</script>
+</body>
+</html>

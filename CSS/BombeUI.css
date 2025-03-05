@@ -1,0 +1,256 @@
+.bombeui-overlay
+{
+    fill: black;
+    fill-opacity: 0;
+    transition: fill-opacity 0.2s;
+}
+
+
+.bombeui-overlay:hover
+{
+    fill-opacity: 0.1;
+}
+
+
+.bombeui-overlay-selected
+{
+    fill-opacity: 0.2 !important;
+}
+
+
+
+.bombeui-controls-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5rem 1rem;
+    width: 100%;
+    height: 10rem;
+    vertical-align: middle;
+    text-align: center;
+    padding: 1rem;
+    font-size: 125%;
+    color: #333;
+}
+
+
+.bombeui-controls-separator
+{
+    width: 0.325rem;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 0.325rem;
+}
+
+
+
+.bombeui-controls-text
+{
+    margin: auto 0;
+    max-width: 7rem;
+}
+
+.bombeui-controls-placeholder-text
+{
+    margin: auto 0;
+}
+
+
+
+.bombeui-controls-button
+{
+    height: 100%;
+    max-width: 10rem;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    transition: background-color 0.2s;
+    color: inherit;
+}
+
+.bombeui-controls-button:hover
+{
+    background-color: #eee;
+}
+
+
+
+.bombeui-controls-vertical-slider-wrapper
+{
+    width: 2rem;
+    height: 100%;
+    padding: 0;
+}
+
+.bombeui-controls-vertical-slider
+{
+    display: block;
+    width: 7rem;
+    height: 1rem;
+    transform: rotate(90deg) translateX(50%) translateY(2.5rem);
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 1rem;
+}
+
+
+.bombeui-controls-vertical-slider:hover
+{
+    opacity: 1;
+}
+
+.bombeui-controls-vertical-slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    appearance: none;
+    background: #333;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.bombeui-controls-vertical-slider::-moz-range-thumb
+{
+    background: #333;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.bombeui-controls-vertical-slider-output
+{
+    margin: auto 1rem;
+    font-size: 175%;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+.bombeui-controls-vertical-slider-output-greek
+{
+    margin: auto 1rem;
+    font-size: 250%;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+
+
+.bombeui-controls-vertical-selector-wrapper
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    width: 3rem;
+    height: 100%;
+}
+
+.bombeui-controls-vertical-selector-button
+{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s;
+    color: #888;
+}
+
+.bombeui-controls-vertical-selector-button:hover
+{
+    background-color: #eee;
+}
+
+.bombeui-controls-vertical-selector-output
+{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.7rem;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+
+
+.bombeui-controls-stacked-text-wrapper
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    width: 10rem;
+    height: 100%;
+}
+
+.bombeui-controls-stacked-text-input, .bombeui-controls-stacked-text-output
+{
+    width: 100%;
+    height: 3rem;
+    font-size: 1.7rem;
+    margin: auto 0;
+    font-family: "Courier New";
+    font-weight: bold;
+    background-color: #eee;
+    border-radius: 0.3rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.bombeui-controls-stacked-text-input
+{
+    border: 2px solid #eee;
+    transition: border-color 0.2s;
+}
+
+.bombeui-controls-stacked-text-input:hover, .bombeui-controls-stacked-text-input:focus
+{
+    border-color: #aaa;
+}
+
+.bombeui-controls-stacked-text-output
+{
+    border: none;
+}
+
+
+
+.bombeui-controls-stecker-grid-wrapper
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem 0.1rem;
+    width: 10rem;
+    min-width: 10rem;
+    height: 100%;
+}
+
+.bombeui-controls-stecker-grid-item
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s;
+    color: #888;
+    font-size: 1.7rem;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+.bombeui-controls-stecker-grid-item:hover
+{
+    background-color: #eee;
+}

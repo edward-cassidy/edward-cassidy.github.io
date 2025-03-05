@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="menuSVG"
+   viewBox="-131.64021 -147.5312 333.65351 264.66324"
+   version="1.1"
+   sodipodi:docname="labelled-menu-2.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   width="333.6535"
+   height="264.66324"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs638">
+    <marker
+       style="overflow:visible"
+       id="marker13906"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path13904"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L-3-6-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L-5-0-2"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L-3-6-9-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L-5-0-2-6"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L-9-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L-4-5"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L-9-4-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L-4-5-0"
+         transform="scale(-0.5)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview636"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.0752549"
+     inkscape:cx="251.51801"
+     inkscape:cy="207.10361"
+     inkscape:window-width="1253"
+     inkscape:window-height="1365"
+     inkscape:window-x="14"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="menuSVG" />
+  <g
+     id="g509"
+     transform="translate(73.137869,-9.5000034)">
+    <path
+       class="b e"
+       d="m -23.539366,60.497043 q 3.985859,0.702431 2.156288,-2.907715 -1.829572,-3.610145 2.156287,-2.907715 3.98586,0.70243 2.156288,-2.907716 -1.829571,-3.610145 2.156288,-2.907715 3.985859,0.70243 2.156288,-2.907716 -1.829572,-3.610145 2.156287,-2.907715 3.9858597,0.70243 2.1562881,-2.907716 -1.8295711,-3.610145 2.1562878,-2.907715 3.9858593,0.70243 2.1562877,-2.907715 -1.8295715,-3.610146 2.1562878,-2.907716 3.9858593,0.70243 2.1562877,-2.907715 -1.8295716,-3.610146 2.1562877,-2.907716 3.9858594,0.70243 2.1562878,-2.907715"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path485" />
+    <path
+       class="a g"
+       d="m -95.747383,-17.954414 q 3.897179,0.463714 1.929843,-2.932257 -1.967337,-3.395972 1.929842,-2.932258 3.897179,0.463714 1.929843,-2.932258 -1.967336,-3.395971 1.929843,-2.932258 3.897179,0.463714 1.929842,-2.932257 -1.967336,-3.395972 1.929843,-2.932258 3.897179,0.463714 1.929842,-2.932258 -1.967336,-3.395971 1.929843,-2.932258 3.897179,0.463714 1.929842,-2.932257 -1.967336,-3.395972 1.929843,-2.932258 3.897179,0.463714 1.929842,-2.932258 -1.967336,-3.395971 1.929843,-2.932257 3.897179,0.463713 1.929843,-2.932258"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path487" />
+    <path
+       class="b f"
+       d="m -14.659972,93.00756 q 0.57726,3.754495 3.2345,1.03999 2.6572399,-2.714505 3.2344997,1.03999 0.5772598,3.754495 3.2344999,1.03999 2.65724,-2.714505 3.2344999,1.03999 0.5772598,3.7545 3.2344998,1.03999 2.6572401,-2.714505 3.2344999,1.03999 0.5772599,3.7545 3.2344999,1.03999 2.6572399,-2.714504 3.2344999,1.03999 0.57726,3.7545 3.2345,1.03999 2.65724,-2.714504 3.2345,1.03999 0.57726,3.7545 3.2345,1.03999 2.65724,-2.7145 3.2345,1.03999 0.577259,3.7545 3.234499,1.03999"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path489" />
+    <path
+       class="a b"
+       d="m -92.628535,27.342063 q -1.413749,3.592574 2.30856,2.568028 3.722308,-1.024545 2.308559,2.568029 -1.413748,3.592574 2.30856,2.568029 3.722309,-1.024546 2.30856,2.568028 -1.413749,3.592574 2.30856,2.568029 3.722308,-1.024545 2.308559,2.568029 -1.413748,3.592574 2.30856,2.568028 3.722309,-1.024545 2.30856,2.568029 -1.413749,3.592574 2.30856,2.568029 3.722308,-1.024546 2.308559,2.568028 -1.413748,3.592574 2.30856,2.568029 3.722309,-1.024546 2.30856,2.568029 -1.413749,3.592574 2.30856,2.568028"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path491" />
+    <path
+       class="g h"
+       d="m -27.119105,-95.147859 q 3.017823,2.394662 3.122858,-1.456394 0.105036,-3.851057 3.122859,-1.456393 3.017823,2.394661 3.122859,-1.456394 0.105036,-3.85106 3.122859,-1.45639 3.017823,2.394658 3.122859,-1.4564 0.105035,-3.85105 3.1228583,-1.45639 3.0178232,2.39466 3.1228588,-1.4564 0.1050355,-3.85105 3.1228587,-1.45639 3.01782327,2.39466 3.12285878,-1.45639 0.10503552,-3.85106 3.12285882,-1.4564 3.0178232,2.39466 3.1228587,-1.45639 0.1050355,-3.85106 3.1228589,-1.4564 3.017823,2.39467 3.122859,-1.45639"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path493" />
+    <path
+       class="e g"
+       d="m 3.5298148,-25.507449 q 1.2367306,-3.575871 -2.3660046,-2.419733 -3.6027352,1.156138 -2.3660046,-2.419733 1.23673058,-3.575871 -2.3660046,-2.419732 -3.6027353,1.156138 -2.3660047,-2.419733 1.2367306,-3.575871 -2.3660046,-2.419733 -3.6027347,1.156138 -2.3660047,-2.419733 1.2367307,-3.575871 -2.366005,-2.419733 -3.602735,1.156138 -2.366004,-2.419733 1.23673,-3.575871 -2.366005,-2.419733 -3.602735,1.156138 -2.366004,-2.419733 1.23673,-3.575871 -2.366005,-2.419733 -3.602735,1.156138 -2.366005,-2.419733 1.236731,-3.575871 -2.366004,-2.419733 -3.602735,1.156139 -2.366005,-2.419732"
+       stroke-width="1"
+       stroke="#808080"
+       fill="none"
+       id="path495" />
+    <text
+       class="b e"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-8.4453516"
+       y="40.143036"
+       id="text497">1</text>
+    <text
+       class="a g"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-82.238487"
+       y="-38.480217"
+       id="text499">2</text>
+    <text
+       class="b f"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="7.9815273"
+       y="100.28749"
+       id="text501">3,4</text>
+    <text
+       class="a b"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-76.46862"
+       y="45.318264"
+       id="text503">5</text>
+    <text
+       class="g h"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-5.2590938"
+       y="-105.34261"
+       id="text505">6</text>
+    <text
+       class="e g"
+       font-family="'Courier New'"
+       font-size="10px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-14.215219"
+       y="-43.655445"
+       id="text507">7</text>
+  </g>
+  <g
+     id="g607"
+     transform="translate(73.137869,-9.5000034)">
+    <line
+       class="b e"
+       x1="-40.493793"
+       y1="85.038597"
+       x2="-22.73613"
+       y2="61.092705"
+       stroke-width="1"
+       stroke="#808080"
+       id="line511" />
+    <line
+       class="a g"
+       x1="-110.80488"
+       y1="6.7433519"
+       x2="-94.912064"
+       y2="-17.404654"
+       stroke-width="1"
+       stroke="#808080"
+       id="line513" />
+    <line
+       class="b f"
+       x1="-41.603127"
+       y1="85.394936"
+       x2="-14.966069"
+       y2="93.959557"
+       stroke-width="1"
+       stroke="#808080"
+       id="line515" />
+    <line
+       class="a b"
+       x1="-112.38388"
+       y1="6.8621292"
+       x2="-93.372215"
+       y2="28.010601"
+       stroke-width="1"
+       stroke="#808080"
+       id="line517" />
+    <line
+       class="g h"
+       x1="-52.414104"
+       y1="-82.247742"
+       x2="-26.696444"
+       y2="-94.24157"
+       stroke-width="1"
+       stroke="#808080"
+       id="line519" />
+    <line
+       class="e g"
+       x1="25.121326"
+       y1="-4.8559885"
+       x2="4.2448149"
+       y2="-26.206573"
+       stroke-width="1"
+       stroke="#808080"
+       id="line521" />
+    <line
+       class="e b"
+       x1="25.209562"
+       y1="-3.5612044"
+       x2="7.4518991"
+       y2="20.384687"
+       stroke-width="1"
+       stroke="#808080"
+       id="line523" />
+    <line
+       class="g a"
+       x1="-52.001442"
+       y1="-82.604263"
+       x2="-67.894264"
+       y2="-58.456261"
+       stroke-width="1"
+       stroke="#808080"
+       id="line525" />
+    <line
+       class="f b"
+       x1="56.953987"
+       y1="117.08405"
+       x2="30.316929"
+       y2="108.51942"
+       stroke-width="1"
+       stroke="#808080"
+       id="line527" />
+    <line
+       class="b a"
+       x1="-42.040707"
+       y1="85.111473"
+       x2="-61.052376"
+       y2="63.963001"
+       stroke-width="1"
+       stroke="#808080"
+       id="line529" />
+    <line
+       class="h g"
+       x1="42.741238"
+       y1="-126.62492"
+       x2="17.023579"
+       y2="-114.63109"
+       stroke-width="1"
+       stroke="#808080"
+       id="line531" />
+    <line
+       class="g e"
+       x1="-52.121765"
+       y1="-83.853149"
+       x2="-31.245255"
+       y2="-62.502567"
+       stroke-width="1"
+       stroke="#808080"
+       id="line533" />
+    <line
+       class="b e"
+       x1="-42.100266"
+       y1="83.847275"
+       x2="-24.342604"
+       y2="59.901382"
+       stroke-width="1"
+       stroke="#808080"
+       id="line535" />
+    <line
+       class="a g"
+       x1="-112.47552"
+       y1="5.6438308"
+       x2="-96.582703"
+       y2="-18.504175"
+       stroke-width="1"
+       stroke="#808080"
+       id="line537" />
+    <line
+       class="b f"
+       x1="-40.990932"
+       y1="83.490936"
+       x2="-14.353875"
+       y2="92.055557"
+       stroke-width="1"
+       stroke="#808080"
+       id="line539" />
+    <line
+       class="a b"
+       x1="-110.89652"
+       y1="5.525053"
+       x2="-91.884857"
+       y2="26.673525"
+       stroke-width="1"
+       stroke="#808080"
+       id="line541" />
+    <line
+       class="g h"
+       x1="-53.259426"
+       y1="-84.060318"
+       x2="-27.541767"
+       y2="-96.054146"
+       stroke-width="1"
+       stroke="#808080"
+       id="line543" />
+    <line
+       class="e g"
+       x1="23.691326"
+       y1="-3.4577401"
+       x2="2.8148146"
+       y2="-24.808325"
+       stroke-width="1"
+       stroke="#808080"
+       id="line545" />
+    <line
+       class="e b"
+       x1="23.60309"
+       y1="-4.7525244"
+       x2="5.8454256"
+       y2="19.193367"
+       stroke-width="1"
+       stroke="#808080"
+       id="line547" />
+    <line
+       class="g a"
+       x1="-53.672089"
+       y1="-83.703789"
+       x2="-69.564911"
+       y2="-59.555782"
+       stroke-width="1"
+       stroke="#808080"
+       id="line549" />
+    <line
+       class="f b"
+       x1="57.566181"
+       y1="115.18005"
+       x2="30.929123"
+       y2="106.61542"
+       stroke-width="1"
+       stroke="#808080"
+       id="line551" />
+    <line
+       class="b a"
+       x1="-40.553352"
+       y1="83.774399"
+       x2="-59.565022"
+       y2="62.625927"
+       stroke-width="1"
+       stroke="#808080"
+       id="line553" />
+    <line
+       class="h g"
+       x1="41.895916"
+       y1="-128.43748"
+       x2="16.178255"
+       y2="-116.44366"
+       stroke-width="1"
+       stroke="#808080"
+       id="line555" />
+    <line
+       class="g e"
+       x1="-53.551765"
+       y1="-82.454903"
+       x2="-32.675255"
+       y2="-61.104317"
+       stroke-width="1"
+       stroke="#808080"
+       id="line557" />
+    <circle
+       class="b e"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-23.539366"
+       cy="60.497044"
+       id="circle559" />
+    <circle
+       class="a g"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-95.747383"
+       cy="-17.954414"
+       id="circle561" />
+    <circle
+       class="b f"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-14.659972"
+       cy="93.007561"
+       id="circle563" />
+    <circle
+       class="a b"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-92.628532"
+       cy="27.342062"
+       id="circle565" />
+    <circle
+       class="g h"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-27.119104"
+       cy="-95.147858"
+       id="circle567" />
+    <circle
+       class="e g"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="3.5298147"
+       cy="-25.507448"
+       id="circle569" />
+    <circle
+       class="e b"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="6.6486626"
+       cy="19.789028"
+       id="circle571" />
+    <circle
+       class="g a"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-68.729584"
+       cy="-59.006023"
+       id="circle573" />
+    <circle
+       class="f b"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="30.623026"
+       cy="107.56742"
+       id="circle575" />
+    <circle
+       class="b a"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-60.308697"
+       cy="63.294464"
+       id="circle577" />
+    <circle
+       class="h g"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="16.600918"
+       cy="-115.53738"
+       id="circle579" />
+    <circle
+       class="g e"
+       r="7"
+       fill="#ffffff"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-31.960255"
+       cy="-61.803444"
+       id="circle581" />
+    <text
+       class="b e"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-23.539366"
+       y="60.497044"
+       id="text583">β</text>
+    <text
+       class="a g"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-95.747383"
+       y="-17.954414"
+       id="text585">α</text>
+    <text
+       class="b f"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-14.659972"
+       y="93.007561"
+       id="text587">β</text>
+    <text
+       class="a b"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-92.628532"
+       y="27.342062"
+       id="text589">α</text>
+    <text
+       class="g h"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-27.119104"
+       y="-95.147858"
+       id="text591">η</text>
+    <text
+       class="e g"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="3.5298147"
+       y="-25.507448"
+       id="text593">ε</text>
+    <text
+       class="e b"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="6.6486626"
+       y="19.789028"
+       id="text595">ε</text>
+    <text
+       class="g a"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-68.729584"
+       y="-59.006023"
+       id="text597">η</text>
+    <text
+       class="f b"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="30.623026"
+       y="107.56742"
+       id="text599">ζ</text>
+    <text
+       class="b a"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-60.308697"
+       y="63.294464"
+       id="text601">β</text>
+    <text
+       class="h g"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="16.600918"
+       y="-115.53738"
+       id="text603">θ</text>
+    <text
+       class="g e"
+       font-family="'Courier New'"
+       font-size="11px"
+       font-weight="bold"
+       fill="#ff0000"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-31.960255"
+       y="-61.803444"
+       id="text605">η</text>
+  </g>
+  <g
+     id="g633"
+     transform="translate(73.137869,-9.5000034)">
+    <circle
+       class="b"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-41.297031"
+       cy="84.442932"
+       id="circle609" />
+    <circle
+       class="a"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-111.64021"
+       cy="6.1935911"
+       id="circle611" />
+    <circle
+       class="g"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="-52.836765"
+       cy="-83.15403"
+       id="circle613" />
+    <circle
+       class="e"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="24.406326"
+       cy="-4.1568642"
+       id="circle615" />
+    <circle
+       class="f"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="57.260082"
+       cy="116.13205"
+       id="circle617" />
+    <circle
+       class="h"
+       r="10"
+       fill="#d3d3d3"
+       stroke-width="1"
+       stroke="#808080"
+       cx="42.318577"
+       cy="-127.5312"
+       id="circle619" />
+    <text
+       class="b"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-41.297031"
+       y="84.442932"
+       id="text621">b</text>
+    <text
+       class="a"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-111.64021"
+       y="6.1935911"
+       id="text623">a</text>
+    <text
+       class="g"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="-52.836765"
+       y="-83.15403"
+       id="text625">g</text>
+    <text
+       class="e"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="24.406326"
+       y="-4.1568642"
+       id="text627">e</text>
+    <text
+       class="f"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="57.260082"
+       y="116.13205"
+       id="text629">f</text>
+    <text
+       class="h"
+       font-family="'Courier New'"
+       font-size="12px"
+       font-weight="bold"
+       dominant-baseline="middle"
+       text-anchor="middle"
+       x="42.318577"
+       y="-127.5312"
+       id="text631">h</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1L-3-6-9)"
+     d="m -39.493571,36.465047 8.92551,-7.89824"
+     id="path3586-6-6-0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1L-3-6-9-2)"
+     d="m -6.5009568,73.095567 8.925506,-7.89824"
+     id="path3586-6-6-0-1"
+     sodipodi:nodetypes="cc" />
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="-19.071678"
+     y="81.020027"
+     id="text528-7-2-3"
+     style="letter-spacing:2px;word-spacing:0px">β=d</text>
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="-52.710747"
+     y="43.120998"
+     id="text528-7-2-3-7"
+     style="letter-spacing:2px;word-spacing:0px">α=b</text>
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="-96.341385"
+     y="71.473045"
+     id="text528-7-1-0-1-7"
+     style="font-size:8px;letter-spacing:0px;word-spacing:0px"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI'"
+       id="tspan6946-9-8-5">(manual scrambling)</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1L)"
+     d="m -41.581446,80.177243 c -14.05893,0 -16.920895,-8.427756 -12.184575,-28.223296 v 0"
+     id="path18502"
+     sodipodi:nodetypes="ccc" />
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="-99.670013"
+     y="43.333889"
+     id="text528-7-1"
+     style="font-size:8px;letter-spacing:0px;word-spacing:0px"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI'"
+       id="tspan6946">(by assumption)</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1L-9-4)"
+     d="M 80.035438,61.01725 66.460252,57.180019"
+     id="path3586-0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1L-9-4-1)"
+     d="M 107.62671,14.634012 96.41778,13.546797"
+     id="path3586-0-6"
+     sodipodi:nodetypes="cc" />
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="124.13406"
+     y="16.239283"
+     id="text528-7"
+     style="letter-spacing:2px;word-spacing:0px">ε=f</text>
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="96.970085"
+     y="63.305038"
+     id="text528-7-2"
+     style="letter-spacing:2px;word-spacing:0px">β=d</text>
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="133.65088"
+     y="74.639481"
+     id="text528-7-1-0-1"
+     style="font-size:8px;letter-spacing:0px;word-spacing:0px"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI'"
+       id="tspan6946-9-8">(previously deduced)</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker13906)"
+     d="m 123.21566,27.878728 c -1.23616,12.195625 -3.56921,17.344797 -13.27975,26.329888"
+     id="path25554"
+     sodipodi:nodetypes="cc" />
+  <text
+     class="a"
+     font-family="'Courier New'"
+     font-size="12px"
+     font-weight="bold"
+     dominant-baseline="middle"
+     text-anchor="middle"
+     x="160.00615"
+     y="43.516571"
+     id="text528-7-1-0-1-7-6"
+     style="font-size:8px;letter-spacing:0px;word-spacing:0px"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI'"
+       id="tspan6946-9-8-5-1">(manual scrambling)</tspan></text>
+</svg>

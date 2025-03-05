@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 7: Feedback Loop: Making the Bombe Even Faster</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class = "text-center">
+        <h1 class="mainhead">Making the Bombe Even Faster</h1>
+        <p class="paragraph">
+            Ideally we would like to be able to simultaneously scan every value for <span class="code">&#945</span> at the same time, instead of checking them one by one like before.
+            <br><br>
+
+            So far we have two cases:
+
+            <br>
+        </p>
+
+        <ol class = "paragraph" style="list-style-position: inside;">
+            <li>When we input a value for <span class="code">&#945</span>, say <span class="code">X</span>, the Bombe outputs the same value <span class="code">&#945</span>.<br>
+                This means our guess that  <span class="code">&#945</span> =  <span class="code">X</span> may possibly be correct.
+            </li>
+            <br>
+            <li>When we input a value for <span class="code">&#945</span>, say <span class="code">X</span>, the Bombe outputs some value other than <span class="code">X</span>, say <span class="code">Y</span>.<br>
+                This means our guess that <span class="code">&#945</span> = <span class="code">X</span> is definitely incorrect.
+            </li>
+         </ol>
+
+        <p class="paragraph">
+            <br>
+            Now, due to the reciprocal nature of the Enigma encryption, we also know <span class="code">&#945</span> cannot take on the value <span class="code">Y</span>.
+
+            <br><br>
+
+            Now let's try doing something very strange: what if we re-input <span class="code">&#945</span> = <span class="code">Y</span> into the Bombe?
+
+            <br><br>
+
+            This may seem silly: why make input a value for <span class="code">&#945</span> that we know is definitely incorrect?
+
+            <br><br>
+
+            However, consider that the further value for <span class="code">&#945</span> that we derive from setting <span class="code">&#945</span> = <span class="code">Y</span>,
+            say <span class="code">Z</span>, we now know to also be incorrect.
+
+            <br><br>
+
+            We can continue to repeat this, and by process of elimination, rule out many incorrect values for <span class="code">&#945</span>.
+
+        </p>
+
+    </div>
+
+
+</body>
+</html>

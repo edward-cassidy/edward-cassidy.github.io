@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6: Single Line Hypothesis: Wires and Cables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+</head>
+<body>
+
+
+    <div class = "text-center">
+        <h1 class="mainhead">Wire and Cables</h1>
+        <p class="paragraph">
+            In our example in the previous chapter, we manually inputted an initial guess for the value of <span class="code">&#945</span>, and derived a different value for <span class="code">&#945</span> from that.
+
+            <br><br>
+
+            Therefore lets create two cables for <span class="code">&#945</span>, one representing our input, and the other representing the output.
+
+        </p>
+    </div>
+
+    <figure class="figure" style="width: 100%">
+        <svg id = "svg" style="aspect-ratio: 3; width: 50%;"></svg>
+        <figcaption><em><b>Figure 6.3</b></em>: <span class="code">&#945<sub>out</sub></span> and <span class="code">&#945<sub>in</sub></span> cables.</figcaption>
+    </figure>
+
+<script>
+    let item = d3.select("svg");
+    let bombe = new IntroductionSLHBombeExample(item,0,1300);
+    item.viewBox = "0 0 1000 1000";
+</script>
+</body>
+</html>

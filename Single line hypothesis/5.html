@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6: Single Line Hypothesis: Wires and Cables</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+    <link href="../CSS/BombeUI.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+
+</head>
+<body class="text-center">
+
+
+    <div class = "text-center">
+        <h1 class="mainhead">Wires and Cables</h1>
+        <p class="paragraph">
+            We need to represent a variable such as <span class="code">&#945</span> as being equal to one of the possible 8 letters, (26 letters in the real bombe).
+            <br><br>
+            Therefore, we need 8 wires (or 26 for the real bombe) to represent the value of <span class="code">&#945</span>. We will refer to these groups of wires as <b>cables</b>.
+
+            <br><br>
+            The cable as a whole represents <span class="code">&#945</span>, and when an individual wire is activated, this means <span class="code">&#945</span> takes on the value that that wire represents.
+
+            <br><br>
+
+            Therefore, multiple live wires in the <span class="code">&#945</span> cable indicates that <span class="code">&#945</span> has multiple values, which is not allowed.
+
+        </p>
+        <figure style="position: relative;top:100px; left:200px; height: 200px">
+            <svg id ="svg" style="position: relative;margin:auto; height: 100%;width:640px">
+            </svg>
+                <p class="code" style="position: relative; right: 340px;bottom:240px; font-size: 24px; letter-spacing: -24px">
+                <span style="position: relative;top: 4px;">a</span>
+                <span style="position: relative;top: 30px;">b</span>
+                <span style="position: relative;top: 54px;">c</span>
+                <span style="position: relative;top: 80px;">d</span>
+                <span style="position: relative;top: 105px;">e</span>
+                <span style="position: relative;top: 129px;left:2px">f</span>
+                <span style="position: relative;top: 154px; right:1px">g</span>
+                <span style="position: relative;top: 179px;">h</span>
+                <span style="position: relative;top: 100px; right:100px;font-size: 50px">&#945</span>
+            </p>
+            <figcaption><em><b>Figure 6.2</b></em>: An interactive cable.</figcaption>
+        </figure>
+
+
+        <div id="menu-generator-ui" class="bombeui-controls-container" style="top: -95px; margin:auto;right:500px; bottom:50px;position:relative;">
+            <p id="a" class="bombeui-controls-text">Input Current At</p>
+            <div class="bombeui-controls-vertical-selector-wrapper">
+                <button id ="b" onclick="current_up()" class="bombeui-controls-vertical-selector-button up"></button>
+                <span id="current_input" class="bombeui-controls-vertical-slider-output">a</span>
+                <button id = "c" onclick="current_down()" class="bombeui-controls-vertical-selector-button down"></button>
+            </div>
+            <span class="bombeui-controls-separator"></span>
+            <button id = "poweron" onclick="power_on()" class="bombeui-controls-button">Power On</button>
+            <span class="bombeui-controls-separator"></span>
+            <button onclick="power_off()" id="poweroff" class="bombeui-controls-button">Power Off</button>
+        </div>
+    </div>
+
+
+
+
+<script>
+
+
+
+    let item = d3.select("svg");
+    let item2 = d3.select("null");
+
+    let style = new Styles("red","grey","7px","5px");
+    let pos = new Vec(10,10);
+    let coord1 = [new Vec(0,0),new Vec(0,25),new Vec(0,50),new Vec(0,75),new Vec(0,100),new Vec(0,125), new Vec(0,150), new Vec(0,175)];
+    let coord2 = [new Vec(600,0),new Vec(600,25),new Vec(600,50),new Vec(600,75),new Vec(600,100),new Vec(600,125), new Vec(600,150), new Vec(600 ,175)];
+
+    let plug1 = new Plug(item,"abcdefgh",pos,coord1,style);
+    let plug2 = new Plug(item,"abcdefgh",pos,coord2,style);
+    let cable = new Cable(item,item,"abcdefgh",plug1,plug2,1400,style);
+
+    d3.selectAll('.up').text("\u25B2");
+    d3.selectAll('.down').text("\u25BC");
+
+    let arr = ["a","b","c","d","e","f","g","h"];
+    let input = 0;
+    function current_up(){
+        input = (input + 1)%8;
+        document.getElementById("current_input").innerText = arr[input];
+    }
+
+    function current_down(){
+        if(input===0){
+            input = 7;
+        }else{
+            input = input - 1;
+        }
+        document.getElementById("current_input").innerText = arr[input];
+
+    }
+
+    let toDisable = d3.selectAll (
+        '#a,'+
+        '#b,'+
+        '#c,'+
+        '#poweron,' +
+        '#current_input'
+    );
+
+    for (let i = 0; i < 8; i++) {
+        let oldpower = plug2.junctions[i].powerOn.bind(plug2.junctions[i]);
+        plug2.junctions[i].powerOn = function(){
+            oldpower();
+            d3.select("#poweroff").style ( "pointer-events", "all" ).style ( "opacity", 1 );
+        }
+    }
+
+
+    function power_on(){
+        toDisable.style ( "pointer-events", "none" ).style ( "opacity", .5 );
+        plug1.powerOn(input);
+    }
+
+
+    function power_off(){
+
+        plug1.powerOff(input).finally(()=>{
+                toDisable.style ( "pointer-events", "all" ).style ( "opacity", 1 );
+                d3.select("#poweroff").style ( "pointer-events", "none" ).style ( "opacity", 0.5 );
+            }
+        )
+
+    }
+    d3.select("#poweroff").style ( "pointer-events", "none" ).style ( "opacity", 0.5 );
+
+
+
+</script>
+
+
+</body>
+</html>

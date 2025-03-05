@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Turing Bombe</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="CSS/index.css" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="javascript/Pages.js"></script>
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-bar-colour">
+		<a data-bs-toggle="offcanvas" data-bs-target="#sidebar" class="menu">
+			☰
+		</a>
+
+		<div class="container-fluid justify-content-md-center">
+			<a class="navbar-brand" href="#">The Turing Welchman Bombe</a>
+		</div>
+	</nav>
+
+
+	<div class="offcanvas offcanvas-start" id="sidebar">
+		<div class="offcanvas-header text-center">
+			<h1 class="offcanvas-title" style=" position:relative; left: 5%">Table of Contents</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+		</div>
+		<hr>
+		<div class="offcanvas-body">
+			<ul id="menu-links" class="nav flex-column mb-auto text-center">
+
+				<a id="introduction-link" href="#" class="nav-link active links" onclick="pageJump('Introduction')">Introduction</a>
+				<a id="enigma-recap-link" href="#" class="nav-link active links" onclick="pageJump('Enigma Recap')">Enigma Recap</a>
+				<a id="fundamentals-link" href="#" class="nav-link active links" onclick="pageJump('Fundamentals')">Fundamentals</a>
+				<a id="menus-and-cribs-link" href="#" class="nav-link active links" onclick="pageJump('Menus and Cribs')">Menus and Cribs</a>
+				<a id="principles-of-the-bombe-link" href="#" class="nav-link active links" onclick="pageJump('Principles of the Bombe')">Principles of the Bombe</a>
+				<a id="single-line-hypothesis-link" href="#" class="nav-link active links" onclick="pageJump('Single line hypothesis')">Single Line Hypothesis</a>
+				<a id="feedback-loop-link" href="#" class="nav-link active links" onclick="pageJump('Feedback Loop')">Feedback Loop</a>
+				<a id="the-diagonal-board-link" href="#" class="nav-link active links" onclick="pageJump('The Diagonal Board')">The Diagonal Board</a>
+				<a id="bombe-sandbox-link" href="bombe.html" class="nav-link active links">Bombe Simulator</a>
+
+			</ul>
+		</div>
+	</div>
+
+
+
+	<iframe is="page-manager" id="PM" path="Introduction" pageNumber="1"></iframe>
+
+
+
+
+	<footer class="fixed-bottom text-center text-white-50">
+
+		<a id="prev-button" onclick="previouspage()" class="btn btn-secondary fw-bold border-black">Previous</a>
+		<a id="next-button" onclick="nextpage()" class="btn btn-secondary fw-bold border-black">Continue</a>
+
+	</footer>
+
+
+
+	<script>
+
+		/* A map of chapters to the number of page numbers they contain */
+		const chapters = new Map ( [
+			[ "Introduction", 4 ],
+			[ "Enigma Recap", 11 ],
+			[ "Fundamentals", 7 ],
+			[ "Menus and Cribs", 8 ],
+			[ "Principles of the Bombe", 25 ],
+			[ "Single line hypothesis", 15 ],
+			[ "Feedback Loop", 12 ],
+			[ "The Diagonal Board", 7 ],
+		] );
+
+		/* A function to highlight the current chapter */
+		function highlightChapter ()
+		{
+			/* Hide the current selection */
+			d3.select ( "#menu-links" ).selectAll ( "*" )
+				.classed ( "links-selected", false );
+
+			/* Show the correct selection */
+			d3.select ( `#${document.getElementById ( "PM" ).path.toLowerCase ().replaceAll ( " ", "-" )}-link` )
+				.classed ( "links-selected", true );
+		}
+
+		/* A junction to disable the previous and next buttons at the beginning and end */
+		function checkForEnd ()
+		{
+			/* Get a handle on the page manager */
+			const pm = document.getElementById ("PM");
+
+			/* Get handles on the buttons */
+			const prev = document.getElementById ( "prev-button" );
+			const next = document.getElementById ( "next-button" );
+
+			/* Check for the beginning */
+			[ prev.style.opacity, prev.style.pointerEvents ] = ( pm.path === "Introduction" && pm.pageNumber === 1 ? [ "0.5", "none" ] : [ "", "" ] );
+
+			/* Check for the end */
+			//[ next.style.opacity, next.style.pointerEvents ] = ( pm.path === "The Diagonal Board" && pm.pageNumber === 7 ? [ "0.5", "none" ] : [ "", "" ] );
+		}
+
+		/* Jump to a particular chapter and page */
+		function pageJump ( chapter, page = 1 )
+		{
+			/* Get a handle on the page manager */
+			const pm = document.getElementById ("PM");
+
+			/* Change the chapter and set the page number to 1 */
+			pm.path = chapter;
+			pm.pageNumber = page;
+
+			/* Highlight the chapter */
+			highlightChapter ();
+
+			/* Check for the end */
+			checkForEnd ();
+
+			/* Change the state */
+			window.history.replaceState ( "", "", `?chapter=${chapter}&page=${page}` );
+		}
+
+		/* Turn to the next page */
+		function nextpage()
+		{
+			/* Get a handle on the page manager */
+			const pm = document.getElementById ("PM");
+
+			/* If at the end of the last chapter, jump to the simulator */
+			if ( pm.path === "The Diagonal Board" && pm.pageNumber === 7 )
+				return window.location.href = "bombe.html";
+
+			/* Increment the current page number, but recognise if we are out of pages */
+			if ( ++pm.pageNumber > chapters.get ( pm.path ) )
+			{
+				/* Search for the current page to get the next page */
+				let found = false;
+				for ( const chapter of chapters.keys () )
+					if ( found )
+					{
+						pm.path = chapter;
+						pm.pageNumber = 1;
+						break;
+					}
+					else
+						found = ( chapter === pm.path );
+			}
+
+			/* Highlight the chapter */
+			highlightChapter ();
+
+			/* Check for the end */
+			checkForEnd ();
+
+			/* Change the state */
+			window.history.replaceState ( "", "", `?chapter=${pm.path}&page=${pm.pageNumber}` );
+		}
+
+		/* Turn to the next page */
+		function previouspage ()
+		{
+			/* Get a handle on the page manager */
+			const pm = document.getElementById ("PM");
+
+			/* Decrement the current page number, but recognise if we are out of pages */
+			if ( --pm.pageNumber < 1 )
+			{
+				/* Search for the current page to get the next page */
+				let found = false;
+				let prevChapter;
+				for ( const chapter of chapters.keys () )
+					if ( ( found = ( chapter === pm.path ) ) )
+					{
+						pm.path = prevChapter;
+						pm.pageNumber = chapters.get ( prevChapter );
+						break;
+					}
+					else
+						prevChapter = chapter;
+			}
+
+			/* Highlight the chapter */
+			highlightChapter ();
+
+			/* Check for the end */
+			checkForEnd ();
+
+			/* Change the state */
+			window.history.pushState ( "", "", `?chapter=${pm.path}&page=${pm.pageNumber}` );
+		}
+
+		/* Access the get parameters */
+		const getParameters = window.location.search.substring ( 1 ).split ( "&" )
+			.reduce ( ( prev, curr ) =>
+			{
+				const tmp = curr.split ( "=" );
+				prev [ tmp [ 0 ] ] = decodeURIComponent ( tmp [ 1 ] );
+				return prev;
+			}, ( {} ) );
+
+		/* Jump to the requested chapter and page */
+		pageJump ( getParameters.hasOwnProperty ( "chapter" ) ? getParameters [ "chapter" ] : "Introduction", getParameters.hasOwnProperty ( "page" ) ? parseInt ( getParameters [ "page" ] ) : 1 );
+
+	</script>
+
+</body>
+</html>

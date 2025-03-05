@@ -1,0 +1,98 @@
+/* Show it is fixed to the top */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height:100%;
+}
+
+iframe
+{
+  position: relative;
+  width: 90%;
+  top: 5rem;
+  left: 5%;
+  height: calc(100% - 10rem);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+nav, footer{
+  height:4rem;
+}
+
+.nav-bar-colour {
+  --bs-bg-opacity: 100;
+  background-color: rgb(31, 44, 91);
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.menu{
+  font-size: 26px;
+  margin: -0.5em;
+  padding: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 1em;
+}
+.menu:hover{
+  background-color: #a4a4c0;
+}
+
+.offcanvas-title{
+  margin-bottom: -20px;
+}
+
+.links{
+  font-size: 18px;
+  margin: 0em;
+  padding: 13px;
+  color: #031838;
+  text-decoration: none;
+  padding-left: 1em;
+  border-radius: 1em;
+}
+.links:hover{
+  background-color: #c9c9da;
+}
+.links-selected
+{
+  background-color: #a4a4c0 !important;
+}
+
+
+.btn-secondary:hover{
+  background-color: rgb(208, 208, 133);!important
+
+}
+.btn-secondary{
+  background-color: #f6f5f5;
+  color: #0a0202;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  margin-bottom: 20px;
+}
+
+.parent {
+  display: flex
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}

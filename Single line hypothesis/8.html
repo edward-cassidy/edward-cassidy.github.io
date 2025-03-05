@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6: Single Line Hypothesis: The Scramblers</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet">
+    <link href="../CSS/BombeUI.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+</head>
+<body>
+
+
+    <div class = "text-center">
+        <h1 class="mainhead">The Scramblers</h1>
+        <p class="paragraph" style="position: relative; left:0px; text-align:center">
+            The machine we are going to build from these cables is going to carry out what is called a <b>single line hypothesis</b>.
+            This is effectively the same process as described in the previous chapter.
+
+            <br><br>
+
+            Recall that we need a cycle in the menu in order to produce contradictions. Let's reduce our menu to just the cycle:
+        </p>
+
+
+    </div>
+
+    <figure class="figure">
+        <svg id ="svg" style="height: 100%">
+        </svg>
+        <figcaption><em><b>Figure 6.5</b></em>: The menu being reduced to only the nodes which form a cycle.</figcaption>
+    </figure>
+
+    <div style="position: relative; width:400px; margin: auto">
+        <div id="menu-generator-ui" class="bombeui-controls-container" style="margin:auto;position:absolute;right:400px; top:-300px">
+            <span class="bombeui-controls-separator"></span>
+            <button id="btn" onclick="Reduce()" class="bombeui-controls-button" style="font-size: 120%">Reduce to Cycle</button>
+            <span class="bombeui-controls-separator"></span>
+        </div>
+    </div>
+
+<script>
+    let item = d3.select("svg");
+    let bombe = new MenuExample(item,true);
+    let reduced = false;
+
+
+    function Reduce(){
+        if (reduced){
+            bombe.showNode("f");
+            bombe.showNode("h");
+            reduced = false;
+            document.getElementById("btn").innerText = "Reduce to Cycle"
+
+        }else{
+            bombe.hideNode("f");
+            bombe.hideNode("h");
+            reduced = true;
+            document.getElementById("btn").innerText = "Expand to Original"
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 5: Principles of the Bombe: Next Steps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1 class = "mainhead">Next Steps</h1>
+    <p class = "paragraph">
+
+        The concepts in this chapter form the basis of how we work out how the Enigma machine was initially set up,
+        before the crib was encoded. Once we have worked this out, we can then decrypt the rest of the ciphertext
+        using these settings.
+
+        <br><br>
+
+        Currently, we have to assume every possible initial scrambler position in turn, and for each, determine
+        which steckerings for a given letter in the crib are valid.
+
+        <br><br>
+
+        Supposing we chose to test <span class="code">a</span>, we would have to set <span class="code">&#945</span> = <span class="code">a</span>, then <span class="code">&#945</span> = <span class="code">b</span>,
+        then <span class="code">&#945</span> = <span class="code">c</span>, ... and so on until <span class="code">&#945</span> = <span class="code">h</span>. We don't need to try any letters
+        other than <span class="code">a</span>, since if we can't find any valid steckering for <span class="code">a</span>, then there cannot be
+        any way to set up the plug board given the assumed initial scrambler position.
+
+        <br><br>
+
+        Hopefully, we will find that <b>most pairs of assumptions lead to a contradiction</b>, so the <b>remaining
+        few can be tested by hand</b>. However, how many contradictions we find depends on factors such as the number of
+        cycles in the menu, so there is still somewhat of a factor of chance that our crib produces a strong menu.
+
+    </p>
+
+</body>
+</html>

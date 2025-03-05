@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 8: The Diagonal Board: Increasing Feedback</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="../CSS/pages.css" rel="stylesheet" />
+	<link href="../CSS/BombeUI.css" rel="stylesheet" />
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="../javascript/bombe.min.js"></script>
+
+</head>
+<body>
+
+	<h1 class = "mainhead">Adding the Diagonal Board</h1>
+	<p class = "paragraph">
+
+		Here is the same Bombe as you saw in the previous chapter, except with all the scramblers removed. Click the button to show and hide the diagonal board.
+
+	</p>
+
+	<figure style="position: relative; height: calc(100% - 10rem); width: 100%; top: 4rem;">
+
+		<svg id="bombe-svg" style="width: 100%; height: 70vh "></svg>
+
+		<div class="bombeui-controls-container" style="height: 6rem; width: 100%;" >
+
+			<span class="bombeui-controls-separator"></span>
+			<button id="dboard-button" class="bombeui-controls-button" style="font-size: 80%; width: 10rem;">Enable Diagonal Board</button>
+			<span class="bombeui-controls-separator"></span>
+
+		</div>
+
+		<figcaption><em><b>Figure 8.1</b></em>: Press the button to show and hide the diagonal board.</figcaption>
+
+	</figure>
+
+
+
+	<script>
+
+		/* The duration of the transformation */
+		const DURATION = 4000;
+
+		/* Create the bombe */
+		const bombe = new FullBombeExample ( null, d3.select ( "#bombe-svg" ), "empty" );
+		bombe.movementDuration = DURATION;
+
+		/* Hide the test register */
+		bombe._plugColumns [ 0 ]._svgTestRegister.remove ();
+		for ( let i = 0; i < 8; ++i )
+			bombe._plugColumns [ 0 ]._wireLabels [ 0 ] [ i ].attr ( "x", bombe._plugColumns [ 0 ]._wireLabels [ 1 ] [ i ].attr ( "x" ) );
+
+		/* Set up the button */
+		const button = d3.select ( "#dboard-button" ).on ( "click", () =>
+		{
+			/* Toggle the dboard */
+			if ( ( bombe.dboard = !bombe.dboard ) )
+				button.text ( "Hide Diagonal Board" );
+			else
+				button.text ( "Show Digonal Board" );
+
+			/* Hide the button */
+			button.style ( "pointer-events", "none" ).style ( "opacity", 0.5 );
+
+			/* Enable the button when the movement has completed */
+			setTimeout ( () => button.style ( "pointer-events", "all" ).style ( "opacity", 1 ), DURATION );
+		} );
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 4: Menus and Cribs: Creating a Menu from a Crib</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="../CSS/pages.css" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../javascript/bombe.min.js"></script>
+</head>
+<body>
+
+    <h1 class = "mainhead">Creating a Menu from a Crib</h1>
+    <p class = "paragraph">
+
+        We now examine each RSP from <span class="code">1</span> onwards in turn.
+
+        <br><br>
+
+        At RSP <span class="code">1</span>, <span class="code">b</span> is encoded to <span class="code">e</span>.
+        We therefore <b>draw a line between the <span class="code">b</span> circle and the <span class="code">e</span> circle</b>, and <b>label this line as <span class="code">1</span></b>.
+
+        <br><br>
+
+        This line has been added in <em>Figure 4.3</em> below.
+
+    </p>
+
+    <figure class="figure">
+        <svg id="menuSVG" style = "position: relative; height: 100%"></svg>
+        <figcaption style = "position: relative;">
+            <em><b>Figure 4.3</b></em>: A line labelled <span class="code">1</span> has been added between the <span class="code">b</span> node and the <span class="code">e</span> node, <br>
+            to represent that <span class="code">b</span> is encoded to <span class="code">e</span> at RSP <span class="code">1</span>.
+        </figcaption>
+    </figure>
+
+    <script>
+
+        /* The menu example */
+        let menuExample;
+
+        /* Create the menu diagram */
+        document.addEventListener ( "DOMContentLoaded", () =>
+		{
+            /* Create the menu example */
+            menuExample = new MenuExample ( d3.select ( "#menuSVG" ) );
+
+			/* Hide all links */
+            menuExample.hideAllLinks ();
+
+			/* Show the b-f link */
+            menuExample.showLink ( "b", "e" );
+        } );
+
+    </script>
+
+</body>
+</html>
